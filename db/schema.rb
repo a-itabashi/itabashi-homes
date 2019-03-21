@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190321044050) do
+ActiveRecord::Schema.define(version: 20190321070726) do
 
   create_table "homes", force: :cascade do |t|
     t.string   "name"
@@ -18,14 +18,18 @@ ActiveRecord::Schema.define(version: 20190321044050) do
     t.string   "address"
     t.integer  "year"
     t.text     "content"
-    t.string   "line_1"
-    t.string   "station_1"
-    t.integer  "walk_a"
-    t.string   "line_2"
-    t.string   "station_2"
-    t.integer  "walk_2"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "stations", force: :cascade do |t|
+    t.string   "line"
+    t.string   "station"
+    t.integer  "walk"
+    t.integer  "home_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["home_id"], name: "index_stations_on_home_id"
   end
 
 end

@@ -6,12 +6,6 @@ one:
   address: MyString
   year: 1
   content: MyText
-  line_1: MyString
-  station_1: MyString
-  walk_a: 1
-  line_2: MyString
-  station_2: MyString
-  walk_2: 1
 
 two:
   name: MyString
@@ -19,9 +13,3 @@ two:
   address: MyString
   year: 1
   content: MyText
-  line_1: MyString
-  station_1: MyString
-  walk_a: 1
-  line_2: MyString
-  station_2: MyString
-  walk_2: 1

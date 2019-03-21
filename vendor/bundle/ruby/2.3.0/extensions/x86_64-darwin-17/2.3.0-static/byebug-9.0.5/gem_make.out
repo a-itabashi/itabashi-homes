@@ -1,0 +1,19 @@
+current directory: /Users/aguru/Desktop/DIC/dev-exam/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.5/ext/byebug
+/Users/aguru/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20190321-2728-1eko5em.rb extconf.rb
+creating Makefile
+
+current directory: /Users/aguru/Desktop/DIC/dev-exam/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.5/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /Users/aguru/Desktop/DIC/dev-exam/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.5/ext/byebug
+make "DESTDIR="
+compiling locker.c
+compiling byebug.c
+compiling context.c
+compiling breakpoint.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+
+current directory: /Users/aguru/Desktop/DIC/dev-exam/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.5/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20190321-2728-8xkqku/byebug
