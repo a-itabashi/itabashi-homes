@@ -1,4 +1,4 @@
-On branch issue/#1
+## On branch issue/#1
 
 このリポジトリは、技術力テスト用のリポジトリです。
 
