@@ -17,6 +17,8 @@ class HomesController < ApplicationController
   end
 
   def show
+    @home = Home.find(params[:id])
+    @station = @home.stations
   end
 
   def edit

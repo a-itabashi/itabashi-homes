@@ -19,7 +19,7 @@
       <td><%= h.year %>年</td>
       <td><%= h.content %></td>
       <td><%= link_to "詳細", home_path(h.id) %></td>
-      <td><%= link_to "編集", edit_home(h.id) %></td>
+      <td><%= link_to "編集", edit_home_path(h.id) %></td>
       <td><%= link_to "削除", home_path(h.id),method: :delete %></td>
     </tr>
     <% end %>
