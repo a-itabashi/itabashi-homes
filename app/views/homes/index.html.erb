@@ -14,7 +14,7 @@
     <% @homes.each do |h| %>
     <tr>
       <td><%= h.name %></td>
-      <td><%= h.price.to_s(:delimited, delimiter: ',') %>円</td>
+      <td><%= h.price %>円</td>
       <td><%= h.address %></td>
       <td><%= h.year %>年</td>
       <td><%= h.content %></td>
