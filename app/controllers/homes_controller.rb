@@ -1,5 +1,5 @@
 class HomesController < ApplicationController
-  before_action :set_params, only: %i[show edit update destroy]
+  before_action :set_params, only: %i[show update destroy]
   
   def index
     @homes = Home.all
@@ -24,10 +24,11 @@ class HomesController < ApplicationController
   end
 
   def edit
+    @home = Home.find(params[:id])
   end
 
   def update
-    if @home.update(home_params)
+    if @home.update(update_params)
       redirect_to root_path
     else
       render 'edit'
@@ -52,4 +53,8 @@ class HomesController < ApplicationController
     @home = Home.find(params[:id])
   end
 
+  def update_params
+    params.require(:home).permit(:name, :price, :address, :year, :content, stations_attributes: 
+                                [:line, :station, :walk, :_destroy, :id])
+  end
 end
