@@ -42,8 +42,6 @@
     </div>
   </div>
   <hr>
-
-
   <div class="info-station">
     <% i = 1 %>
     <%= f.fields_for :stations do |s_f| %>    
@@ -77,12 +75,12 @@
     <% i += 1 %>
     <% end %>
   </div>
-    <div class="actions">
-      <%= f.submit "登録する" %>
-    </div>
+  <div class="actions">
+    <%= f.submit "登録する" %>
+  </div>
   <% end %>
 </div>
-  <div class="back-action">
-   <%= link_to "戻る", root_path %>
-  </div>
+<div class="back-action">
+ <%= link_to "戻る", root_path %>
+</div>
 </div>
