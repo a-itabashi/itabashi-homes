@@ -1,5 +1,5 @@
 class HomesController < ApplicationController
-  before_action :set_params, only: %i[show update destroy]
+  before_action :set_params, only: %i[show update destroy edit]
   
   def index
     @homes = Home.all
@@ -19,12 +19,11 @@ class HomesController < ApplicationController
   end
 
   def show
-    @home = Home.find(params[:id])
     @station = @home.stations
   end
 
   def edit
-    @home = Home.find(params[:id])
+    @station = @home.stations
   end
 
   def update
