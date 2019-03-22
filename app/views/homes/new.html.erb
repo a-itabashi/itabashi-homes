@@ -1,6 +1,6 @@
 <div class="new-main">
-<h1>物件登録</h1>
-<%= form_for(@home) do |f| %>
+  <h1>物件登録</h1>
+  <%= form_for(@home) do |f| %>
   <div class="field">
     <div>
       <%= f.label :name, "物件名" %>
@@ -30,7 +30,7 @@
       <%= f.label :year, "築年数"  %>
     </div>
     <div>
-      <%= f.text_field :year %>
+      <%= f.text_field :year %>年
     </div>
   </div>
   <div class="field">
@@ -41,73 +41,65 @@
       <%= f.text_area :content %>
     </div>
   </div>
-  
   <hr>
-
-<h2>最寄り駅１</h2>
-   <%= f.fields_for :stations do |s_f| %>
-    <div class="field">
-        <div>
-          <%= s_f.label :line, "路線名"  %>
-        </div>
-        <div>
-          <%= s_f.text_field :line %>
-        </div>
-    </div>
-
-    <div class="field">
-        <div>
-          <%= s_f.label :station, "駅名"  %>
-        </div>
-        <div>
-          <%= s_f.text_field :station %>
-        </div>
-    </div>
-
-    <div class="field">
-        <div>
-          <%= s_f.label :walk, "徒歩分数"  %>
-        </div>
-        <div>
-          <%= s_f.text_field :walk %>分
-        </div>
-    </div>
-  <% end %>
-
-<h2>最寄り駅２</h2>
+  <h2>最寄り駅１</h2>
   <%= f.fields_for :stations do |s_f| %>
-    <div class="field">
-        <div>
-          <%= s_f.label :line, "路線名"  %>
-        </div>
-        <div>
-          <%= s_f.text_field :line %>
-        </div>
+  <div class="field">
+    <div>
+      <%= s_f.label :line, "路線名"  %>
     </div>
-
-    <div class="field">
-        <div>
-          <%= s_f.label :station, "駅名"  %>
-        </div>
-        <div>
-          <%= s_f.text_field :station %>
-        </div>
+    <div>
+      <%= s_f.text_field :line %>
     </div>
-
-    <div class="field">
-        <div>
-          <%= s_f.label :walk, "徒歩分数"  %>
-        </div>
-        <div>
-          <%= s_f.text_field :walk %>分
-        </div>
+  </div>
+  <div class="field">
+    <div>
+      <%= s_f.label :station, "駅名"  %>
     </div>
+    <div>
+      <%= s_f.text_field :station %>
+    </div>
+  </div>
+  <div class="field">
+    <div>
+      <%= s_f.label :walk, "徒歩分数"  %>
+    </div>
+    <div>
+      <%= s_f.text_field :walk %>分
+    </div>
+  </div>
   <% end %>
+  <h2>最寄り駅２</h2>
+  <%= f.fields_for :stations do |s_f| %>
+  <div class="field">
+    <div>
+      <%= s_f.label :line, "路線名"  %>
+    </div>
+    <div>
+      <%= s_f.text_field :line %>
+    </div>
+  </div>
 
-    
-
+  <div class="field">
+    <div>
+      <%= s_f.label :station, "駅名"  %>
+    </div>
+    <div>
+      <%= s_f.text_field :station %>
+    </div>
+  </div>
+  <div class="field">
+    <div>
+      <%= s_f.label :walk, "徒歩分数"  %>
+    </div>
+    <div>
+      <%= s_f.text_field :walk %>分
+    </div>
+    <% end %>
+  </div>
   <div class="actions">
     <%= f.submit "登録する" %>
   </div>
-<% end %>
+  <% end %>
+  <%= link_to "戻る", root_path %>
 </div>
