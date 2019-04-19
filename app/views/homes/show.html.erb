@@ -1,0 +1,41 @@
+<div class="show-main">
+    <div>
+      <p><b>物件名:</b> <%= @home.name%></p>
+    </div>
+    <div>
+      <p><b>賃料:</b> <%= @home.price %>円</p>
+    </div>
+    <div>
+      <p><b>住所:</b> <%= @home.address %></p>
+    </div>
+    <div>
+      <p><b>築年数</b> <%= @home.year%>年</p>
+    </div>
+    <div>
+      <p><b>備考</b> <%= @home.content%></p>
+    </div>
+</div>
+  <hr>
+   <div class="show-station">
+    <% for i in 0..((@station.length)-1) %>
+      <% k = i + 1 %>
+      <h2>最寄り駅<%= k.to_s %></h2>
+    </div>
+<div class="show-main">
+      <div>
+        <p><b>路線名</b> <%= @station[i].station %>
+      </div>
+      <div>
+        <p><b>駅名</b> <%= @station[i].station %></p>
+      </div>
+      <div>
+        <p><b>徒歩分数</b> <%= @station[i].walk %></p>
+      </div>
+      </div>
+    <% end %>
+  <div class="actions">
+    <%= link_to "編集", edit_home_path(@home.id) %>
+    <span>｜</span>
+    <%= link_to "戻る", root_path %>
+  </div>
+</div>
