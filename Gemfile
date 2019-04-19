@@ -14,6 +14,11 @@ gem 'dotenv-rails'
 gem 'unicorn' 
 gem 'mini_racer', platforms: :ruby 
 
+gem 'bcrypt', '~> 3.1.7'
+
+gem 'ed25519'
+gem 'bcrypt_pbkdf'
+
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'pry-rails'
